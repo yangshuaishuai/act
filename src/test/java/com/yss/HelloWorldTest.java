@@ -1,13 +1,11 @@
 package com.yss;
 
-import java.io.InputStream;
 import java.util.List;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
-import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.junit.Test;
@@ -43,9 +41,9 @@ public class HelloWorldTest {
 	
 	@Test
 	public void  findMyTask(){
-		String assignee="李四";
+		String assignee="张三";
 		List<Task> list=taskService.createTaskQuery()
-				//.taskAssignee(assignee)
+				.taskAssignee(assignee)
 				.list();
 		for (Task task : list) {
 			System.out.println("处理人是:"+task.getAssignee());
@@ -59,7 +57,7 @@ public class HelloWorldTest {
 	
 	@Test
 	public void completeTask(){
-		taskService.complete("25018");  
+		taskService.complete("72505");  
 	}
 	
 
