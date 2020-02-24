@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.yss</groupId>
-  <artifactId>wechat</artifactId>
+  <artifactId>act</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>wechat</name>
+  <name>act</name>
   <url>http://maven.apache.org</url>
 
   <properties>
