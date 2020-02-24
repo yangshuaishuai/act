@@ -48,7 +48,9 @@ public class ProcessVariables {
 	 
 		
 	}
-	
+	/**
+	 * 查询个人任务
+	 */
 	@Test
 	public void  findMyTask(){
 		String assignee="李四";
@@ -63,17 +65,22 @@ public class ProcessVariables {
 		} 
 	}
 	
+	/**
+	 * 设定流程变量
+	 */
 	@Test 
 	public void setVariable(){
 		
-		//runtimeService.setVariable(paramString1, paramString2, paramObject);
-		String taskId="47521";
+ 		String taskId="47521";
 		taskService.setVariableLocal(taskId, "请假天数", 5);
 		taskService.setVariable(taskId, "请假时间",new Date());
 		taskService.setVariable(taskId, "请假原因","鸡下蛋了！");
 		//taskService.setVariableLocal(taskId, variableName, value); 只会在当前节点有效 不是全局的
 		//taskService.(taskId, variableName, value);  
 	}
+	/**
+	 * 获取流程变量的值
+	 */
 	@Test 
 	public void getVariable(){
 		
@@ -90,7 +97,9 @@ public class ProcessVariables {
 	
 	
 	
-	
+	/**
+	 * 设定流程变量的值使用集合
+	 */
 	@Test 
 	public void setMapVariable(){
 		
@@ -106,7 +115,9 @@ public class ProcessVariables {
 	}
 	
 	
-	
+	 /**
+     * 设定流程变量式java对象 
+     */
 	@Test 
 	public void setJavaBeanVariable(){
 		
@@ -123,7 +134,9 @@ public class ProcessVariables {
 	}
 	
 	
-
+    /**
+     * 获取流程变量式java对象 
+     */
 	@Test 
 	public void getJavaBeanVariable(){
 		
